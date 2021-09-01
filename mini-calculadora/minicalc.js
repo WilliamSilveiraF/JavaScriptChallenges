@@ -6,7 +6,7 @@ const menos = n1 - n2
 const vezes = n1 * n2
 const dividido = n1 / n2
 
-window.alert("o resultado da soma é " + mais )
-window.alert("O resultado da subtração é " + menos)
-window.alert("O resultado  da multiplicação é " + vezes)
-window.alert("O resultado da divisão é " + dividido)
+window.alert(`A soma de n1 + n2 é ${mais}`)
+window.alert(`A subtração de n1 + n2 é ${menos}`)
+window.alert(`A multiplicação de n1 + n2 é ${vezes}`)
+window.alert(`A divisão de n1 + n2 é ${dividido}`)
