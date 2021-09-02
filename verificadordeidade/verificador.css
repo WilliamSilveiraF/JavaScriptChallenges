@@ -1,0 +1,36 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+h1 {
+    color: white;
+}
+main {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    width: 500px;
+    height: 500px;
+}
+section {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#imgPerson {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background-image: url(/verificadordeidade/images/interrogação.jpg);
+    background-size: contain;
+    /*url(/verificadordeidade/images/interrogação.jpg);*/
+}
