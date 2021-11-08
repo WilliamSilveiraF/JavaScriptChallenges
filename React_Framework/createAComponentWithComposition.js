@@ -4,9 +4,9 @@ const ChildComponent = () => {
         <p>I am the child</p>
       </div>
     );
-  };
+};
   
-  class ParentComponent extends React.Component {
+class ParentComponent extends React.Component {
     constructor(props) {
       super(props);
     }
@@ -20,4 +20,4 @@ const ChildComponent = () => {
         </div>
       );
     }
-  };
+};
