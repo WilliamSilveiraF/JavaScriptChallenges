@@ -1,18 +1,9 @@
-const ehMultiploDaBase = function(base, numero) {
-    return numero % base == 0
-}
 const todosSaoMultiplos = function(multiplo, arrDeBases) {
     return arrDeBases.filter(item => multiplo % item == 0).length == arrDeBases.length
 }
 const acheIntervalo = function(x, y) {
-    let menor, maior;
-    if (x > y) {
-        maior = x;
-        menor = y;
-    } else {
-        maior = y;
-        menor = x;
-    }
+    let maior = y > x ? y : x;
+    let menor = y == maior ? x : y 
     
     let arrayDeBases = [];
     while (maior >= menor) {
@@ -26,10 +17,9 @@ function ehMultiplo(frst, last) {
 
     num = 1;
     console.log(todosSaoMultiplos(num, intervalo))
-    while (todosSaoMultiplos(num, intervalo) == false) {
+    while (!todosSaoMultiplos(num, intervalo)) {
         num++;
     }
     return num;
 }
-console.log(ehMultiplo(1, 20))
-//console.log(todosSaoMultiplos(1, acheIntervalo(1, 10)))
+console.log(ehMultiplo(1, 10))
