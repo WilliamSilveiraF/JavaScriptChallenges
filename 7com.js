@@ -16,12 +16,12 @@ const funcAux = {
     }
 }
 
-function maiorNumDivisivelPorTodos(frst, last) {
+function menorNumDivisivelPorTodos(frst, last) {
     let intervalo = funcAux.acheIntervalo(frst, last);
     num = 1;
     while (!funcAux.todosSaoMultiplos(num, intervalo)) {
         num++;
     }
-    return num;
+    return `Entre o intervalo ${frst} e ${last}, o menor número divisível por todos é ${num}`;
 }
-console.log(maiorNumDivisivelPorTodos(1, 20))
+console.log(menorNumDivisivelPorTodos(1, 20))
