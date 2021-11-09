@@ -1,8 +1,10 @@
 const funcAux = {
-    todosSaoMultiplos: function(umNumero, arrDivisores) { 
+    //Confirma se o número é múltiplo de todas as bases divisoras
+    todosSaoMultiplos: function(umNumero, arrDivisores) {
         let saoMultiplos = arrDivisores.filter(base => umNumero % base == 0);
         return saoMultiplos.length == arrDivisores.length 
     },
+    //Acha o todos os números entre (1, 50), output = [1, 2, 3, ..., 50]
     acheIntervalo: function(x, y) {
         let maior = y > x ? y : x;
         let menor = y == maior ? x : y 
