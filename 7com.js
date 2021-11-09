@@ -1,25 +1,27 @@
-const todosSaoMultiplos = function(multiplo, arrDeBases) {
-    return arrDeBases.filter(item => multiplo % item == 0).length == arrDeBases.length
-}
-const acheIntervalo = function(x, y) {
-    let maior = y > x ? y : x;
-    let menor = y == maior ? x : y 
-    
-    let arrayDeBases = [];
-    while (maior >= menor) {
-        arrayDeBases.push(menor);
-        menor++;
+const funcAux = {
+    todosSaoMultiplos: function(umNumero, arrDivisores) { 
+        let saoMultiplos = arrDivisores.filter(base => umNumero % base == 0);
+        return saoMultiplos.length == arrDivisores.length 
+    },
+    acheIntervalo: function(x, y) {
+        let maior = y > x ? y : x;
+        let menor = y == maior ? x : y 
+        
+        let intervaloCrescente = [];
+        while (maior >= menor) {
+            intervaloCrescente.push(menor);
+            menor++;
+        }
+        return intervaloCrescente;
     }
-    return arrayDeBases;
 }
-function ehMultiplo(frst, last) {
-    let intervalo = acheIntervalo(frst, last)
 
+function maiorNumDivisivelPorTodos(frst, last) {
+    let intervalo = funcAux.acheIntervalo(frst, last);
     num = 1;
-    console.log(todosSaoMultiplos(num, intervalo))
-    while (!todosSaoMultiplos(num, intervalo)) {
+    while (!funcAux.todosSaoMultiplos(num, intervalo)) {
         num++;
     }
     return num;
 }
-console.log(ehMultiplo(1, 10))
+console.log(maiorNumDivisivelPorTodos(1, 20))
