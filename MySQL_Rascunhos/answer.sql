@@ -11,3 +11,8 @@ order by SALARY asc;
 select FIRST_NAME, LAST_NAME, JOB_ID, DEPARTMENT_ID from employees
 where DEPARTMENT_ID = 40; /*Só tem o Departamento 40 em Londres */
 
+select departments.DEPARTMENT_NAME, count(employees.EMPLOYEE_ID)
+from departments join employees 
+on departments.DEPARTMENT_ID = employees.DEPARTMENT_ID
+GROUP BY(departments.DEPARTMENT_NAME)
+;
