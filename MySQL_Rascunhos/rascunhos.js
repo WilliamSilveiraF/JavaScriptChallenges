@@ -9,4 +9,15 @@ altura float,
 nacionalidade varchar(20)
 );
 
-describe pessoas; (Descreve uma tabela)
+describe pessoas; //(Descreve uma tabela)
+
+drop database nomeDoDataBase; //Exclui um dataBase
+
+
+//Diferença entre dois bancos de dados
+create database cadastro //Criando um banco de dados com coleção de caracteres
+default character set utf8
+default collate utf8_general_ci;
+
+
+create database meubanco; //Sem coleção de caracteres
