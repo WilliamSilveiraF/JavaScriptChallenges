@@ -1,16 +1,19 @@
-function menorNumDivisivelPorTodos(inicio, fim){
+function menorNumDivisivelPorTodos(){
     var state = true
     let menorNum = 1
     while (state) {
-        for(var x = inicio; x <= fim; x++) {
+        for(var x = 1; x <= 20; x++) {
+            if (menorNum > 100000) {
+                console.log(menorNum)
+            }
             if (menorNum % x != 0) {
                 menorNum++
                 break;
-            } else if (x == fim) {
+            } else if (x == 20) {
                 state = false
                 return menorNum
             }
         }
     }
 }
-console.log(menorNumDivisivelPorTodos(1, 20))
+console.log(menorNumDivisivelPorTodos())

@@ -1,0 +1,16 @@
+function menorNumDivisivelPorTodos(){
+    
+    let menorNum = 1
+    while (true) {
+        
+        for(var x = 1; x <= 10; x++) {
+            if (menorNum % x != 0) {
+                menorNum++
+                break;
+            } else if (x == 21) {
+                return menorNum
+            }
+        }
+    }
+}
+console.log(menorNumDivisivelPorTodos())

@@ -1,0 +1,19 @@
+function menorNumDivisivelPorTodos(){
+    let menorNum = 0
+    while (true) {
+        let qtdNaoDivisores = 0
+        let numTestado = 1
+        for (var x = 1; x <= 20; x++) {
+            numTestado % x !== 0 ? qtdNaoDivisores++ : null
+            
+            if (qtdNaoDivisores > 0) {
+                menorNum++
+                break
+            }
+            if (x == 20 && qtdNaoDivisores == 0) {
+                return menorNum
+            }
+        }
+    }
+}
+console.log(menorNumDivisivelPorTodos())
