@@ -13,4 +13,4 @@ function menorNumDivisivelPorTodos(inicio, fim){
         }
     }
 }
-console.log(menorNumDivisivelPorTodos(1, 23))
+console.log(menorNumDivisivelPorTodos(1, 10))
